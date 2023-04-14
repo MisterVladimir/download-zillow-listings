@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "download-zillow-listings"
+version = "0.1.0"
+description = ""
+authors = ["Vladimir Shteyn <vladimir.shteyn@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+loguru = "^0.4"
+pywebcopy = ">=7.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">=3.0.0"
+pytest = ">=6.0"
+pytest-mock = ">=3.0.0"
+pytest-cov = "^4.0.0"
+
+[tool.pytest.ini_options]
+addopts = "-vv -p no:warnings --cov --cov-report term-missing --cov-report html"
+testpaths = ["test"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
