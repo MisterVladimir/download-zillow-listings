@@ -86,7 +86,7 @@ class TestDownloadOneZillowListing:
         # Assert
         assert result == downloaded_file
         mock_download_webpage.assert_called_once_with(
-            zillow_url_to_download, download_folder=tmp_path, open_in_browser=False
+            zillow_url_to_download, download_folder=tmp_path
         )
 
     @staticmethod
@@ -116,7 +116,7 @@ class TestDownloadOneZillowListing:
             download_one_zillow_listing(ZillowUrl(zillow_url_to_download), tmp_path)
 
         mock_download_webpage.assert_called_once_with(
-            zillow_url_to_download, download_folder=tmp_path, open_in_browser=False
+            zillow_url_to_download, download_folder=tmp_path
         )
 
         exc.value: MissingIndexHtml
